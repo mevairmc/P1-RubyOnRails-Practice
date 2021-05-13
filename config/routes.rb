@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   post "sign_in", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
+  #Passwords
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
+
   root to: "main#index"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
